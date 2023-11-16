@@ -7,6 +7,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [speechUrl, setSpeechUrl] = useState('');
   const [apiKey, setApiKey] = useState('');
+  const [voice, setVoice] = useState('');
 
   useEffect(() => {
     const apiKeyInput = prompt('Enter your OpenAI API key:');
@@ -19,13 +20,16 @@ function App() {
   });
 
   const handleGetSpeech = async () => {
-    if (!input) return;
+    if (!input) {
+      alert('Please enter some text!');
+      return;
+    }
 
     setLoading(true);
     try {
       const res = await openai.audio.speech.create({
         model: 'tts-1',
-        voice: 'alloy',
+        voice: voice,
         input: input,
       });
 
@@ -58,6 +62,21 @@ function App() {
       <div className="container">
         <div className="box">
           <h1 className="txt">Rovertts</h1>
+          <div className="selectBox">
+            <select
+              className="select"
+              value={voice}
+              onChange={(e) => setVoice(e.target.value)}
+            >
+              <option value="alloy">01_A</option>
+              <option value="echo">02_E</option>
+              <option value="fable">03_F</option>
+              <option value="nova">04_N</option>
+              <option value="onyx">05_O</option>
+              <option value="shimmer">06_S</option>
+            </select>
+          </div>
+
           <div className="input">
             <textarea
               type="text"
