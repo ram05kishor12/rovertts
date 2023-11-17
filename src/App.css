@@ -92,12 +92,13 @@ input placeholder{
 @media screen and (max-width: 668px) {
   .container {
     height: auto;
-    padding: 4.5rem 5rem;
+    padding: 4.5rem 6rem;
   }
 
   .box {
     width: 90%;
     height: auto;
+    padding: 3.5rem 4rem;
   }
 
   .txt {
