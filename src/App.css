@@ -114,17 +114,15 @@ input placeholder{
   }
 
   .btn {
-    margin-left: 0;
     margin-top: 1rem;
     width: 55%;
     margin-right: 1rem;
-    padding: 0rem 2.9rem;
+    padding: 0rem 1rem;
   }
   .row{
-    display: flex;
     align-items: center;
     flex-direction: row;
-    gap : 15px;
+    justify-content: space-around;
   }
 }
 
