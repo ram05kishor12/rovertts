@@ -96,7 +96,7 @@ input placeholder{
   }
 
   .box {
-    width: 90%;
+    width: 100%;
     height: auto;
     padding: 3.5rem 4rem;
   }
@@ -122,7 +122,7 @@ input placeholder{
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap : 2px;
+    gap : 15px;
     padding: 1.25rem 0rem;
   }
 }
