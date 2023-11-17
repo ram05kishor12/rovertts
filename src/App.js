@@ -20,6 +20,10 @@ function App() {
   });
 
   const handleGetSpeech = async () => {
+    if(!apiKey) {
+      alert('Please enter your API key!');
+      return;
+    }
     if (!input) {
       alert('Please enter some text!');
       return;
@@ -68,12 +72,12 @@ function App() {
               value={voice}
               onChange={(e) => setVoice(e.target.value)}
             >
-              <option value="alloy">01_A</option>
-              <option value="echo">02_E</option>
-              <option value="fable">03_F</option>
-              <option value="nova">04_N</option>
-              <option value="onyx">05_O</option>
-              <option value="shimmer">06_S</option>
+              <option value="alloy">01_Alloy</option>
+              <option value="echo">02_Echo</option>
+              <option value="fable">03_Fable</option>
+              <option value="nova">04_Nova</option>
+              <option value="onyx">05_Onyx</option>
+              <option value="shimmer">06_Shimmer</option>
             </select>
           </div>
 
