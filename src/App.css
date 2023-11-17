@@ -118,13 +118,13 @@ input placeholder{
     margin-top: 1rem;
     width: 55%;
     margin-right: 1rem;
+    padding: 1rem 1.5rem;
   }
   .row{
     display: flex;
     align-items: center;
     flex-direction: row;
     gap : 15px;
-    padding: 1.25rem 0rem;
   }
 }
 
