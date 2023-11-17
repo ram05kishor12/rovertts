@@ -40,6 +40,7 @@ function App() {
       const blob = new Blob([await res.arrayBuffer()], { type: 'audio/mpeg' });
       const url = URL.createObjectURL(blob);
       setSpeechUrl(url);
+      setInput(''); 
     } catch (error) {
       console.error('Error:', error);
     } finally {

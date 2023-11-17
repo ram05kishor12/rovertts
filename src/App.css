@@ -81,6 +81,7 @@ input placeholder{
   resize: none;
   border: none;
   background: linear-gradient(135deg, #d3fbef 10%, #facef1 100%);
+  cursor: pointer;
 }
 
 .selectBox option{
